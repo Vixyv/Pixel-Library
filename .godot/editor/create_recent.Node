@@ -1,0 +1,5 @@
+CharacterBody3D
+Sprite3D
+ShapeCast3D
+Node
+CollisionShape3D
