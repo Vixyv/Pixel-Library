@@ -1,6 +1,12 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1700254844
-icon.svg::CompressedTexture2D::1167194315986658452::1699999373::1699999381::1::::<><>::
-::res://Scenes/::1700249145
-::res://Scenes/Levels/::1700249221
-level.tscn::PackedScene::7616134045484369855::1700249221::0::1::::<><>::
+::res://::1700426293
+icon.svg::CompressedTexture2D::8202592197475786122::1700004134::1700004145::1::::<><>::
+::res://materials/::1700338682
+grey_mat.tres::StandardMaterial3D::1456861483116577867::1700338682::0::1::::<><>::
+orange_mat.tres::StandardMaterial3D::744947041935105748::1700338682::0::1::::<><>::
+::res://scenes/::1700339742
+::res://scenes/levels/::1700364848
+level.tscn::PackedScene::5331382191439007040::1700364848::0::1::::<><>::uid://u0ykb6hgqiql::::res://materials/grey_mat.tres<>uid://bspve37k2hsx4::::res://scenes/player/player.tscn
+::res://scenes/player/::1700365181
+player.gd::GDScript::-1::1700365181::0::1::::<>CharacterBody3D<>::
+player.tscn::PackedScene::3682069256090573339::1700365181::0::1::::<><>::uid://ku4f0keahrgm::::res://materials/orange_mat.tres<>res://scenes/player/player.gd

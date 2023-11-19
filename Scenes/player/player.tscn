@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://bspve37k2hsx4"]
+
+[ext_resource type="Material" uid="uid://ku4f0keahrgm" path="res://materials/orange_mat.tres" id="1_gk4m4"]
+[ext_resource type="Script" path="res://scenes/player/player.gd" id="1_qw4v4"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_tqnm5"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_2pojj"]
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_qw4v4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_tqnm5")
+
+[node name="Pivot" type="Node3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Pivot"]
+material_override = ExtResource("1_gk4m4")
+mesh = SubResource("CapsuleMesh_2pojj")
+skeleton = NodePath("../..")
+
+[node name="Camera3D" type="Camera3D" parent="Pivot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)

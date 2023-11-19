@@ -1,5 +1,7 @@
+Node3D
 CharacterBody3D
-Sprite3D
-ShapeCast3D
-Node
+DirectionalLight3D
+Camera3D
+MeshInstance3D
 CollisionShape3D
+StaticBody3D
