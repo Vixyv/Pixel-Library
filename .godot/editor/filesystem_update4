@@ -1,5 +1,6 @@
-res://scenes/levels/level.tscn
 res://materials/grey_mat.tres
 res://materials/orange_mat.tres
-res://scenes/player/player.gd
+res://scenes/Levels/main.tscn
 res://scenes/player/player.tscn
+res://scenes/player/player.gd
+res://scenes/player/player_temp.gd

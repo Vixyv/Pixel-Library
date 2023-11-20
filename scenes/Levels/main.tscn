@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://brloy7h8tiby5"]
+[gd_scene load_steps=5 format=3 uid="uid://ch7tc6fbjyjdg"]
 
 [ext_resource type="Material" uid="uid://u0ykb6hgqiql" path="res://materials/grey_mat.tres" id="1_25ss7"]
 [ext_resource type="PackedScene" uid="uid://bspve37k2hsx4" path="res://scenes/player/player.tscn" id="2_rs3j5"]
