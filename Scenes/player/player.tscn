@@ -20,7 +20,5 @@ material_override = ExtResource("1_gk4m4")
 mesh = SubResource("CapsuleMesh_2pojj")
 skeleton = NodePath("../..")
 
-[node name="CameraPivot" type="Marker3D" parent="."]
+[node name="Camera" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
-
-[node name="Camera" type="Camera3D" parent="CameraPivot"]
