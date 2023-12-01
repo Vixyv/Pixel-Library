@@ -1,4 +1,3 @@
-res://scenes/Levels/main.tscn
-res://scenes/levels/main.tscn
 res://scenes/player/player.tscn
-res://testing/Player.gd
+res://scenes/player/player.gd
+res://scenes/levels/main.tscn

@@ -1,38 +1,24 @@
 extends CharacterBody3D
 
-# Speed, meters per second
-@export var speed = 14
-# Downward acceleration when in the air, meters per second squared
-@export var fall_acceleration = 75
+const SPEED = 10.0
+const JUMP_VELOCITY = 4.5
 
-var target_velocity = Vector3.ZERO
+# Get the gravity from the project settings to be synced with RigidBody nodes.
+var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 func _physics_process(delta):
-	# We create a local variable to store the input direction.
-	var direction = Vector3.ZERO
+	# Add the gravity.
+	if not is_on_floor():
+		velocity.y -= gravity * delta
 
-	# We check for each move input and update the direction accordingly.
-	if Input.is_action_pressed("move_forward"):
-		direction.z -= 1
-	if Input.is_action_pressed("move_left"):
-		direction.x -= 1
-	if Input.is_action_pressed("move_back"):
-		direction.z += 1
-	if Input.is_action_pressed("move_right"):
-		direction.x += 1
+	# Get the input direction and handle the movement/deceleration.
+	var input_dir = Input.get_vector("move_left", "move_right", "move_forward", "move_back")
+	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
+	if direction:
+		velocity.x = direction.x * SPEED
+		velocity.z = direction.z * SPEED
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+		velocity.z = move_toward(velocity.z, 0, SPEED)
 
-	if direction != Vector3.ZERO:
-		direction = direction.normalized()
-		$Pivot.look_at(position + direction, Vector3.UP)
-	
-	# Ground Velocity
-	target_velocity.x = direction.x * speed
-	target_velocity.z = direction.z * speed
-
-	# Vertical Velocity
-	if not is_on_floor(): # If in the air, fall towards the floor. Literally gravity
-		target_velocity.y = target_velocity.y - (fall_acceleration * delta)
-
-	# Moving the Character
-	velocity = target_velocity
 	move_and_slide()

@@ -1,14 +1,14 @@
 [gd_scene load_steps=5 format=3 uid="uid://bspve37k2hsx4"]
 
+[ext_resource type="Script" path="res://scenes/player/player.gd" id="1_ek741"]
 [ext_resource type="Material" uid="uid://ku4f0keahrgm" path="res://materials/orange_mat.tres" id="1_gk4m4"]
-[ext_resource type="Script" path="res://scenes/player/player_temp.gd" id="1_hsnvw"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_tqnm5"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_2pojj"]
 
 [node name="Player" type="CharacterBody3D"]
-script = ExtResource("1_hsnvw")
+script = ExtResource("1_ek741")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_tqnm5")
